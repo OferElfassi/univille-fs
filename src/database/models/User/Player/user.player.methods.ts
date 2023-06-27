@@ -31,8 +31,9 @@ export const playerMethods: IPlayerInstanceMethods = {
     return this.save();
   },
   async addNewAchievement(this, achievement) {
+    console.log("addNewAchievement", achievement);
     this.achievements.push(achievement);
-    this.score += achievement.score;
+    this.score = achievement.playerTotal;
     return this.save();
   },
 

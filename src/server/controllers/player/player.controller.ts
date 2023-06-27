@@ -111,12 +111,11 @@ class PlayerController
 
   async setAchievement(req, res, next) {
     console.log('SET_ACHIEVEMENT');
+    const {gameCode,identity,missionId,missionDuration} = req.params;
+    console.log({gameCode,identity,missionId,missionDuration})
     try {
       const achievement = await GameModel.setPlayerAchievement(
-          req.params.gameCode,
-          req.params.identity,
-          req.params.missionId,
-          req.params.missionDuration
+          gameCode,identity,missionId,missionDuration
       );
       res.status(200).json({message: 'success', data: achievement});
     } catch (e) {
