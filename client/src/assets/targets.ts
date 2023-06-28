@@ -127,10 +127,10 @@ const static_targets = [
     id: 'BusStation1',
     name: 'תחנת אוטובוס',
     description: 'תחנת אוטובוס',
-    objectPhotoUrl: 'images/locations/BusStation.png',
-    mapPhotoUrl: 'images/locations/BusStation.png',
+    objectPhotoUrl: 'images/locations/BusStation_real.png',
+    mapPhotoUrl: 'images/locations/BusStation_game.png',
     location: { x: 32.0837559, y: 34.8012767 },
-    address: {heb:'',eng:''},
+    address: {heb:'ארלוזורוב 77, רמת גן, ישראל',eng:''},
   },
 ];
 
