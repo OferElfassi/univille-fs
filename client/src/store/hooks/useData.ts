@@ -85,6 +85,10 @@ export function useData() {
     dispatch(dataActions.fetchSchoolPlayers());
   }
 
+  const givePointsByColors = (gameCode: string, colorPoints: { color: string; points: number; }[]) => {
+    dispatch(dataActions.givePointsByColors(gameCode, colorPoints));
+  }
+
   return {
     dataState: values,
     dataActions: {
@@ -111,6 +115,7 @@ export function useData() {
       updateGameMeta: useCallback(updateGameMeta, []),
       deleteGame: useCallback(deleteGame, []),
       fetchSchoolPlayers: useCallback(fetchSchoolPlayers, []),
+      givePointsByColors: useCallback(givePointsByColors, []),
     },
   };
 }

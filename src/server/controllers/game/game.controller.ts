@@ -244,6 +244,32 @@ class GameController
     }
   };
 
+  givePointsByColors = async (req, res, next) => {
+    console.log('GIVE_POINTS_BY_COLOR');
+    try {
+      const { gameCode } = req.params;
+      const { colorPoints } = req.body;
+        const game = await GameModel.findOne({code: gameCode}).populate('players');
+        if (game !== null){
+          const players = game.players;
+          for(const player of players){
+            for(const colorPoint of colorPoints){
+              // @ts-ignore
+              if(player.group.name === colorPoint.color){
+                // @ts-ignore
+                player.points += colorPoint.points;
+                // @ts-ignore
+                await player.save();
+              }
+            }
+          }
+        }
+        res.status(200).json({ message: 'success', data: game });
+    } catch (e) {
+      next(e);
+    }
+  }
+
   joinGame2 = async (req, res, next) => {
     console.log('game JOIN_GAME');
     try {

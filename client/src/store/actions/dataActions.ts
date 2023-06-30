@@ -127,6 +127,20 @@ export const dataActions = {
     };
   },
 
+  givePointsByColors: (gameCode: string, colorPoints: { color: string; points: number; }[]) => {
+    return async (dispatch, getState) => {
+      try {
+        dispatch(uiActions.setLoader(true));
+        const response = await gameApi.givePointsByColors(gameCode, colorPoints);
+        dispatch(uiActions.setSuccess(response.data.message));
+      } catch (e) {
+        dispatch(uiActions.setAlert(e.message));
+      } finally {
+        dispatch(uiActions.setLoader(false));
+      }
+    };
+  },
+
   fetchSchoolPlayers: () => {
     return async (dispatch, getState) => {
       try {

@@ -27,6 +27,7 @@ class GameRouter {
     this.router.post('/join', gameController.joinGame); // POST /api/v2/game/join  -  {playerId, gameCode}
     this.router.get('/active/:gameCode', gameController.isActive); // GET /api/v2/game/active/{gameCode}
     this.router.get('/timeleft/:gameCode', gameController.timeLeft); // GET /api/v2/game/timeleft/{gameCode}
+    this.router.get('/givePointsByColors/:gameCode', gameController.givePointsByColors); // GET /api/v2/game/timeleft/{gameCode}
     // old
     this.router.get('/dummyApi/hint/:index', gameController.getHint2);
     this.router.get('/dummyApi/tag/:index', gameController.getObjectTag2);

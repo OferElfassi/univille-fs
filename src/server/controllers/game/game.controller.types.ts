@@ -10,6 +10,7 @@ export interface IGameController {
   updateMission: IControlFn<Partial<IMission>, { missionId: string }>;
   updateGameMeta: IControlFn<Partial<IGameMeta>, { gameId: string }>;
   joinGame: IControlFn<never, { playerId: string; gameCode: string }>;
+  givePointsByColors: IControlFn<{ colorPoints:[{color:string,points:number}] }, { gameCode: string }>;
   isActive: IControlFn<never, { gameCode: string }>;
   timeLeft: IControlFn<never, { gameCode: string }>;
 }

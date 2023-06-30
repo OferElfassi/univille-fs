@@ -30,8 +30,8 @@ const TargetInput = (props:ITargetInput) => {
             description:target?.description??"",
             hint:{
                 title:target?.name??target?.title??"",
-                text:`${target?.name??target?.title??""} לך ל`,
-                hint:`${target?.name??target?.title??""} לך ל`,
+                text:` לך ל${target?.name??target?.title??""} `,
+                hint:` לך ל${target?.name??target?.title??""} `,
                 image:target?.mapPhotoUrl??""
             },
             id:Math.random().toString(),

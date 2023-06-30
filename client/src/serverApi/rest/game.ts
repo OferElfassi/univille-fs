@@ -56,4 +56,9 @@ export const gameApi = {
     const res = await serverApi.get(`/api/v2/game/timeleft/${gameCode}`);
     return serverApi.handleResult(res, 'Time Left Error');
   },
+  givePointsByColors: async (gameCode:string, colorPoints: {color:string,points:number}[]
+    ) => {
+    const res = await serverApi.put(`/api/v2/game/givePointsByColors/${gameCode}`, {colorPoints});
+    return serverApi.handleResult(res, 'Give Points Error');
+  }
 };
