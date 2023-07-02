@@ -127,7 +127,7 @@ const static_targets = [
     unityObjectTag: 'BusStation1',
     id: 'BusStation1',
     name: 'תחנת אוטובוס',
-    description: 'גשו לתחנת האוטובוס בארלוזורוב 77, היא ממש מעבר לפינה וקבלו את הרמז הבא',
+    description: 'תחנת האוטובוס ליד אתר בניה ברחוב ארלוזורוב 77',
     objectPhotoUrl: 'images/locations/BusStation_real.png',
     mapPhotoUrl: 'images/locations/BusStation_game.png',
     location: { x: 32.0837559, y: 34.8012767 },
