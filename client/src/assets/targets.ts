@@ -4,8 +4,9 @@ const static_targets = [
     id: '100_MosheAvivBuilding',
     name: 'מגדל משה אביב ',
     description:
-        "מגדל משה אביב או בשמו השני מגדל אוסיף-אביב על שם החברה שבנתה אותו, הידוע גם בשמו הקודם מגדל שער העיר, הוא גורד שחקים ברח' ז'בוטינסקי 7, סמוך למתחם הבורסה שברמת גן. המגדל בעל 68 הקומות מתנשא לגובה של 235 מטר. המגדל היה גורד השחקים הגבוה בישראל עד בניית מגדל עזריאלי שרונה בשנת 2016, שגבוה ממנו ב-3.5 מטרים. לאחר פטירת היזם שהקים אותו, משה אביב, נקרא המגדל על שמו.",
+        "מגדל משה אביב הוא גורד שחקים ברח' ז'בוטינסקי 7, סמוך למתחם הבורסה שברמת גן. המגדל בעל 68 הקומות בגובה של 235 מטר. המגדל היה גורד השחקים הגבוה בישראל עד 2016.",
     objectPhotoUrl: 'images/locations/100_MosheAvivBuilding_real.png',
+
     mapPhotoUrl: 'images/locations/100_MosheAvivBuilding_game.png',
     location: { x: 32.083910, y: 34.803862 },
     address: {heb:'דרך אבא הלל 2, רמת גן, ישראל',eng:'Abba Hillel Silver Rd 2, Ramat Gan, Israel'},
@@ -126,7 +127,7 @@ const static_targets = [
     unityObjectTag: 'BusStation1',
     id: 'BusStation1',
     name: 'תחנת אוטובוס',
-    description: 'תחנת אוטובוס',
+    description: 'גשו לתחנת האוטובוס בארלוזורוב 77, היא ממש מעבר לפינה וקבלו את הרמז הבא',
     objectPhotoUrl: 'images/locations/BusStation_real.png',
     mapPhotoUrl: 'images/locations/BusStation_game.png',
     location: { x: 32.0837559, y: 34.8012767 },

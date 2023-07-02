@@ -102,7 +102,8 @@ export const statics: IGameStaticMethods = {
     const player = await PlayerModel.findById(playerIdentity);
     console.log('player', player)
     const randomColorIndex = Math.floor(Math.random() * game.colors.length);
-    const color = game.colors[randomColorIndex];
+    // const color = game.colors[randomColorIndex]; // fix presentation in the ui
+    const color = {name:"blue",hex:"#0000ff",heb:"כחול"};
     player.group = color;
     await player.save();
     return color;
